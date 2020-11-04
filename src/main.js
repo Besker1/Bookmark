@@ -2,7 +2,8 @@ import './style.css';
 import store from './store';
 import templates from './templates';
 import api from './api';
-
+import Cuid from 'cuid'
+import cuid from 'cuid';
 const setupEventListeners = () => {
 
     // main page event listeners
@@ -64,7 +65,7 @@ const setupEventListeners = () => {
             const title = formData.get("addbookmark-title");
             const url = formData.get("addbookmark-url");
             const desc = formData.get("addbookmark-description");
-            const rating = formData.get("addbookmark-rating");
+            const rating = parseInt(formData.get("addbookmark-rating"));
             
             const bookmark = {
                 title,
@@ -90,11 +91,13 @@ const render = () => {
     let main = document.querySelector("main");
 
     if ( store.page === 'main' ) {
-        api.getBookmarks(bookmarks => {
+       api.getBookmarks(bookmarks => {
             store.bookmarks = bookmarks.map(b => {
                 if ("expanded" in b) return b;
                 return {...b,expanded:false}
+
             });
+            
             main.innerHTML = templates.main_page(store); //render main page using template function templates.main_page;
         });
     }

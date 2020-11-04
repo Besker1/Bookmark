@@ -1,13 +1,13 @@
 let store = {
     bookmarks: [
-      {
-        id: '7ddr',
-        title: 'Test1',
-        rating: 3,
-        url: 'http://www.test1.com',
-        desc: 'content for test1',
-        expanded: true
-      }
+      // {
+      //   id: '7ddr',
+      //   title: 'Test1',
+      //   rating: 3,
+      //   url: 'http://www.test1.com',
+      //   desc: 'content for test1',
+      //   expanded: true
+      // }
     ],
     adding: false,
     page: 'main', // main or add
