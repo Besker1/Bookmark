@@ -73,7 +73,7 @@ const setupEventListeners = () => {
                 rating
             }
 
-            console.log('this is the bookmark app', bookmark)
+            console.log('this is the bookmark app', bookmark) // eslint-disable-line no-console
             api.createBookmark(bookmark, ()=>{
                 store.page = 'main';
                 render();

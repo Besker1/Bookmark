@@ -18,7 +18,7 @@ const createBookmark = (bookmark,callback) => {
         method: "POST",
         body: JSON.stringify(bookmark)
     }
-    fetch(`${API_URL}/bookmarks`,options)
+    fetch(`${API_URL}/bookmarks`, options)
         .then(callback)
 }
 
