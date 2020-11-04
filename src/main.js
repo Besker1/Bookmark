@@ -30,7 +30,7 @@ const setupEventListeners = () => {
     // // individual bookmark item view descriptions on main page
     window.addEventListener('click', (e)=>{
         // handle button click
-        if (e.target.classList.contains('bookmark-item') && !e.target.classList.contains('bookmark-item-button-delete')) {
+        if (e.target.classList.contains('show') || e.target.classList.contains('bookmark-item') && !e.target.classList.contains('bookmark-item-button-delete')) {
             e.target.classList.toggle("expanded");
         }
     });

@@ -55,15 +55,16 @@ const create_bookmark = (bookmark) => {
                 </div>
                 <div class="bookmark-item-rating ${bookmark.expanded ? 'expanded':''}">${bookmark.rating}</div>
                 <div class="bookmark-item-button">
-                    <button class="bookmark-item-button-delete">DELETE</button>
+                    <button class="bookmark-item-button-delete">DELETE</button>  
+                    <button class="bookmark-item ${bookmark.expanded ? 'expanded' : ''}" >View</button>
                 </div>
                 <div class="bookmark-item-content-wrapper ${bookmark.expanded ? 'expanded':''}">
-                    <div class="bookmark-item-rating">${bookmark.rating}</div>
+                    <div class="bookmark-item-rating">Rating: ${bookmark.rating}</div>
                     <div class="bookmark-item-link">
                         <a href="${bookmark.url}">Visit Site</a>
                     </div>
                     <div class="bookmark-item-description">
-                        ${bookmark.desc}
+                        Description: ${bookmark.desc}
                     </div>
                 </div>
             </li>`
