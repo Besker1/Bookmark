@@ -1,6 +1,6 @@
 import { callbackify } from "util"
 
-const API_URL = `https://thinkful-list-api.herokuapp.com/Besker1`
+const API_URL = `https://thinkful-list-api.herokuapp.com/Besker`
 
 const getBookmarks = (callback) => {
     // get list of all bookmarks
