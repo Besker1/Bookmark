@@ -15,7 +15,7 @@ const config = {
         '@babel/polyfill', path.resolve(__dirname, 'src', 'main.js'),
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         publicPath: (env === 'development') ? '/' : '/',
         filename: (env === 'development') ? '[name].[hash].js' : '[name].[contenthash].js',
     },
