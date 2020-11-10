@@ -7,7 +7,7 @@
     "repository": {},
     "bugs": {},
     "keywords": [],
-    "main": "main.js",
+    "main": "webpack.config.js",
     "entry": "./src/main.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --display-error-details",
